@@ -13,15 +13,15 @@ const maps = {
   base: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 };
 
-const Map = () => {
+const Map = (props,a,b) => {
   const [map, setMap] = useState(null);
-  const [start, setStart] = useState([38.9072, -77.0369])
-  const [end, setEnd] = useState([37.7749, -122.4194])
+  const [start, setStart] = useState(props.a)
+  const [end, setEnd] = useState(props.b)
 
   return (
     <>
       <MapContainer
-        center={[37.0902, -95.7129]}
+        center={props.center}
         zoom={3}
         zoomControl={false}
         style={{ height: "100vh", width: "100%", padding: 0 }}
