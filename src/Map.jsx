@@ -8,6 +8,7 @@ import {
 import { Button } from "@material-ui/core";
 
 import RoutingControl from './RoutingControl'
+import ZoomControl from './ZoomControl';
 
 const maps = {
   base: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -22,9 +23,9 @@ const Map = (props,a,b) => {
     <>
       <MapContainer
         center={props.center}
-        zoom={3}
+        zoom={1}
         zoomControl={false}
-        style={{ height: "100vh", width: "100%", padding: 0 }}
+        style={{ height: "90vh", width: "100vw", padding: 0 }}
         whenCreated={map => setMap(map)}
       >
         {/* *************** */}
@@ -34,7 +35,7 @@ const Map = (props,a,b) => {
           position={'topleft'} 
           start={start} 
           end={end} 
-          color={'#757de8'} 
+          color={'#757de8'}
         />
         <LayersControl position="topright">
           <LayersControl.BaseLayer checked name="Map">
@@ -44,6 +45,7 @@ const Map = (props,a,b) => {
             />
           </LayersControl.BaseLayer>
         </LayersControl>
+        <ZoomControl />
       </MapContainer>
     </>
   );
