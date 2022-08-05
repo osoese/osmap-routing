@@ -25,7 +25,7 @@ const Map = (props,a,b) => {
         center={props.center}
         zoom={1}
         zoomControl={false}
-        style={{ height: "90vh", width: "100vw", padding: 0 }}
+        style={{ height: "75vh", width: "100vw", padding: 0 }}
         whenCreated={map => setMap(map)}
       >
         {/* *************** */}
