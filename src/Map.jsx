@@ -14,7 +14,7 @@ const maps = {
   base: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 };
 
-const Map = (props,a,b) => {
+const Map = (props) => {
   const [map, setMap] = useState(null);
   const [start, setStart] = useState(props.a)
   const [end, setEnd] = useState(props.b)
