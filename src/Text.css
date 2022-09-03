@@ -1,0 +1,12 @@
+.plainText {
+    font-size: 2rem;
+    width:100%;
+    text-align: center;
+    margin: 0vw auto;
+}
+
+.plainTextHighlight {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    background-color: aqua;
+}

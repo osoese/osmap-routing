@@ -18,9 +18,15 @@ export default function App() {
             {/** adding some props to map and then way to update them **/}
             <Main center={center} a={a} b={b} setTitle={setTitle} />
             <div className={`footer-wrapper`}>
-                <div className={`footer-control white-bottom`}>
-                    <div className={`title white-bottom`}>{title}</div>
-                    <div className={`footer-balance white-bottom`}>balance</div>
+                <div className={`footer-control`}>
+                    <div className={`footer-tab white-bottom`}>{title}</div>
+                    <div className={`footer-tab white-bottom`}>balance</div>
+                </div>
+                <div className={`footer-anchor`}>
+                    no
+                </div>
+                <div className={`footer-overlay`}>
+                    overlay
                 </div>
             </div>
         </div>

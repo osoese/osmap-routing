@@ -16,10 +16,23 @@ const Main = (props) => {
 
     return(
         <>
-            {(mainView === 'Map' && <Map center={props.center} a={props.a} b={props.b} />)}
-            {(mainView === 'Text' && <Text center={props.center} a={props.a} b={props.b} />)}
+            <div style={{
+                margin:'1vw',
+                maxWidth:'99vw',
+                maxHeight: '75vh',
+                overflow:'hidden',
+                border:'2px solid blue',
+                borderRadius: '35px',
+                }}>
+                {(mainView === 'Map' && <Map center={props.center} a={props.a} b={props.b} />)}
+                {(mainView === 'Text' && <Text center={props.center} a={props.a} b={props.b} />)}
+            </div>
             <div
-                style={{position:'absolute', top:'97vh', width:'100vw', zIndex:'900', textAlign:'center'}}
+                style={{
+                    width:'100vw',
+                    zIndex:'1300',
+                    textAlign:'center'
+                }}
                 onClick={updateMainView}
             >Main View is {mainView} click to change</div>
         </>
